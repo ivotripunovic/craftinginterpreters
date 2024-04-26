@@ -1,6 +1,9 @@
 package com.craftinginterpreters.lox;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.craftinginterpreters.lox.TokenType.*;
 
 class Scanner {
@@ -22,7 +25,7 @@ class Scanner {
             scanToken();
         }
 
-        tokens.add(new Token(EOF, "", null, null));
+        tokens.add(new Token(EOF, "", null, line));
         return tokens;
     }
 
